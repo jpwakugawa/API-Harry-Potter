@@ -34,7 +34,8 @@ $ heroku open -a 'nome-do-app-criado'
 ```
 
 ## Buildando a imagem
-```
-$ docker build -t 'nome-da-img' . 
-$ docker run -it -p 'porta':3000 'nome-da-img'
-```
+* Importante buildar dentro da pasta `src`
+    ```
+    docker build -f ../docker/web.Dockerfile -t harry-web .
+    docker run -it -p 3000:3000 harry-web
+    ```
